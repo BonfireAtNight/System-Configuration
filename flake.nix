@@ -9,10 +9,8 @@
     nixosConfigurations.mySystem = {
       system = "x86_64-linux";
       modules = [
-        ./configuration.nix
+        ./nixos-configuration.nix
       ];
     };
-
-    defaultPackage.x86_64-linux = self.nixosConfigurations.mySystem;
   };
 }
