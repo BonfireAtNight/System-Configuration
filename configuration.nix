@@ -12,8 +12,8 @@
   nixos = {
     nixosConfigurations.mySystem = {
       system = "x86_64-linux";
-      # Add the following line to fix the error
-      config.system.build = "x86_64-linux";
+      
+      config.system.build = "x86_64-linux"; # Correctly set the system's target architecture
 
       imports =
         [ # Include the results of the hardware scan.

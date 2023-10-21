@@ -13,8 +13,6 @@
       ];
     };
 
-    # Instead of `mySystem` you can use any name you want
-    # Make sure to change it in all relevant places (including other files)
-    defaultPackage.x86_64-linux = self.nixosConfigurations.mySystem;
+    defaultPackage = self.nixosConfigurations.mySystem; # Use the same attribute name
   };
 }
