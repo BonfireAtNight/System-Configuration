@@ -2,7 +2,7 @@
   description = "My NixOS configuration";
 
   inputs = {
-    nixpkgs.url = github:nixos/nixpkgs/nixos-unstable;
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs = { self, nixpkgs, ... }: {
@@ -13,6 +13,6 @@
       ];
     };
 
-    defaultPackage = self.nixosConfigurations.mySystem; # Use the same attribute name
+    defaultPackage.x86_64-linux = self.nixosConfigurations.mySystem;
   };
 }
